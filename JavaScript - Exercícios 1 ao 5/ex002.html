@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <!--Segundo exercício do Curso de JavaScript desenvolvido pelo professor Gustavo Guanabara. Mais um código simples. Só que dessa vez já vai ter uma variável para receber o valor do window prompt. Além disso, temos uma concatenação dentro do window alert-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso JS</title>
+    <style>
+        body{
+            background-color: rgb(130, 130, 168); /*isso é um comentário em CSS*/
+            font-style: italic;
+            font-size: medium;
+            font-family:  Calibri;
+            color: rgb(219, 101, 101);
+        }
+        h1{
+            color: rgb(99, 20, 99);
+            font: normal 50pt bolder arial;
+            text-align: center;
+        }
+        p{
+            color: rgb(92, 44, 10);
+            font-size: large;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, mundo!</h1>
+    <p>Meu segundo <br>programa em JavaScript</p> <!--isso é um comentário em html-->
+    <p>Já me livrei da maldição</p>
+    <script>
+        var nome = window.prompt('Qual é o seu nome?') //vai perguntar o nome e guardar a resposta na variável
+        window.alert('Muito prazer em te conhecer, '+ nome) //o sinal de + se chama concatenação
+    </script>
+</body>
+</html>

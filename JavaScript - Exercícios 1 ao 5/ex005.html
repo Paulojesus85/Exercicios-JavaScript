@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <!--Quinto exercício desenvolvido durante o Curso de JavaScript do professor Gustavo Guanabara-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+</head>
+<body>
+    <h1>Este é o quinto exercício do Curso de JavaScript do professor Gustavo Guanabara.<br> Vamos iniciar os estudos com DOM</h1>
+    <p>Aqui é o parágrafo com a posição 0. A ideia do exercício é mostrar que podemos manipular o DOM.</p>
+    <p>Aqui é o parágrafo com a posição 1. Podemos fazer essa manipulação através do getElement ou do querySelector</p>
+    <p>Aqui é o parágrafo com a posição 2. Para manipular, eu criei uma variável que recebeu o document.getElementsByTagName('p')[0].<br>
+        O valor dentro dos parenteses é o elemnto do DOM que quero manipular e o valor dentro do colchetes a posição do elemento.</p>
+    <p>Aqui é o parágrafo com a posição 3. Depois de usar o getElement ou o querySelector é só usar a variável para alterar os estilos,<br>
+        concatenar, entre outras coisas. Fizemos isso na última frase que aparece no HTML: concatenamos os valores para formar uma nova frase.</p>
+    <div id = "msg">Aqui é uma div com o id msg. Também podemos manipular essa div usando os mesmos princípios indicados acima.</div>
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[2]
+        var p2 = document.getElementsByTagName ('p')[0]
+        var p3 = document.getElementsByTagName ('p')[1]
+        var corpo = document.body
+        /*var d = document.getElementById ('msg') // não precisa colocar colchetes e identificar o número relativo a posição.*/
+        var d = document.querySelector ('div#msg')
+        d.style.color = "white"
+        window.document.write ('<br>Está escrito assim: ' + p1.innerText)
+        p1.style.color = 'blue'
+        p1.style.fontFamily = 'arial'
+        p2.style.color = 'red'
+        p3.style.color = "green"
+        p3.style.fontSize = "18pt"
+        document.write ('<br>Vou repetir: '+ p2.innerText)
+        corpo.style.background = "pink"
+       /* d.style.color = 'white'
+        d.style.background = "blue"
+        d.innerText = "Mudei o escrito"*/
+    </script>
+</body>
+</html>

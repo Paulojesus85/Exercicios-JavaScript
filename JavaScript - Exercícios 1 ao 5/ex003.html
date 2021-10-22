@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <!--Este é o terceiro exercício desenvolvido no Curso de JavaScript do professor Gustavo Guanabara-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso JS</title>
+    <style>
+        body{
+            background-color: rgb(55, 211, 101); /*isso é um comentário em CSS*/
+            font-style: italic;
+            font-size: medium;
+            font-family:  Calibri;
+            color: rgb(151, 51, 51);
+            text-align: center;
+        }
+        h1{
+            color: rgb(156, 158, 157);
+            font: normal 50pt bold arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, mundo!</h1>
+    <p>Este é o terceiro <br>programa em JavaScript</p> <!--isso é um comentário em html-->
+    <p>Já me livrei da maldição</p><br>
+    <p>Neste programa temos dois window.prompt que pedirão um número cada. Esses números serão armazenados<br>
+        em duas variáveis diferentes. Também teremos uma variável que receberá o valor da soma dos dois valores.<br>
+        Para encerrar o script, o resultado da soma vai aparecer em um window.alert.</p>
+    <script>
+        var n1 = Number(window.prompt('Digite um número: '))
+        var n2 = Number(window.prompt('Digite outro número: '))
+        var s = n1 + n2
+        window.alert(`A soma de ${n1} com ${n2} é igual a ${s}`)
+    </script>
+</body>
+</html>

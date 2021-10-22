@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <!--Este é o quarto exercício do Curso de JavaScript desenvolvido pelo professor Gustavo Guanabara-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso JS</title>
+    <style>
+        body{
+            background-color: rgba(170, 150, 37, 0.774); /*isso é um comentário em CSS*/
+            font-style: italic;
+            font-size: medium;
+            font-family:  Calibri;
+            text-align: center;
+            color: rgb(121, 102, 231);
+        }
+        h1{
+            color: rgb(84, 226, 236);
+            font: normal 50pt bold arial;
+        }
+        p{
+            font-size: 20pt;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, mundo!</h1>
+    <p>Este é o quarto <br>programa em JavaScript</p> <!--isso é um comentário em html-->
+    <p>Já me livrei da maldição</p><br>
+    <p>Neste programa temos um window.prompt que pergunta o nome do usuário e outro que pergunta a idade.<br>
+    Esses valores serão armazenados em duas variáveis distintas. O objetivo principal desse exercício é <br>
+    colocar em prática as funções .toUpperCase() para transformar toda a string em maiúscula, .toLowerCase()<br>
+    para transformar toda a string em minúscula e o .length para saber quantas letras tem uma string.</p>
+    <script>
+        var nome = (window.prompt('Qual é o seu nome?'))
+        var idade = (window.prompt('Qual a sua idade?'))
+        window.alert (`Seu nome é ${nome} e sua idade é ${idade} anos.`)
+        window.alert ("Seu nome em Maiúsculo é " + nome.toUpperCase())
+        window.alert (`Seu nome em minúsculo é ${nome.toLowerCase()} e ele tem ${nome.length} letras.`)
+    </script>
+</body>
+</html>
