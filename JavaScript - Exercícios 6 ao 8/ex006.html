@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--Sexto exercício desenvolvido durante o Curso de JavaScript do professor Gustavo Guanabara.
+O intuito desse exercício é usar pela primeira vez a tag <script> e criar a primeira interação.
+Para isso, usaremos addEventListener ('evento', função)-->
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area{
+            font: normal 20pt Arial;
+            background: green;
+            padding: auto;
+            margin: 0px auto;
+            color: white;
+            width: 400px;
+            height: 300px;
+            line-height: 250px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="area">
+        Passe o mouse... <!--aqui é uma div com as características determinadas no CSS (de forma simples, pois não é o foco do exercício). Ao passar o mouse por essa div, vai acionar o addEventListener('mouseenter', entrar). O primeiro parâmetro dentro do parenteses é a ação que precisa ocorrer para o evento ser ativado. O segundo parâmetro é a função que será ativada a partir do momento que o mouse entrar na área da div. No início da tela, teremos uma área de div com as caracteristicas do CSS. Mas, quando o mouse entrar na área (mouseenter) vai ser ativado a função entrar que vai alterar o background para vermelho e vai trocar o texto (passe o mouse...) para Entrou! Se dentro da área div eu clicar, vai acionar o próximo addEventListener ('click', clicar). Nesse caso, a função clicar vai mudar o texto para clicou! e o backgroud para preto. Toda vez que eu sair da área div vai ser ativado o addEventListener ('mouseout', sair) que vai disparar a função sair, tendo o background mudado para azul e o texto para Saiu!. AS função são determinadas logo abaixo-->
+    </div>
+    <script>
+        var a = document.getElementById ('area') //a variável a vai pegar o elemento que tenha o id 'area'. Esse id é da div. É aí que acontecerá as mudanças ativadas pelo addEventListener()
+        a.addEventListener ('click', clicar)
+        a.addEventListener ('mouseenter', entrar)
+        a.addEventListener ('mouseout', sair)
+        //as três linhas acima são os addEventListener. O primeiro elemento é a variável a, depois temos a função addEventListener e por último o tipo de evento que vai dispar a função e qual função será disparada
+        function clicar() {
+            a.innerText = 'Clicou!'
+            a.style.background= 'black'
+        }
+        function entrar() {
+            a.style.background= 'red'
+            a.innerText= 'Entrou!'
+        }
+        function sair() {
+            a.innerText= 'Saiu!'
+            a.style.background= 'blue'
+        }
+        //acima temos as três função que serão disparadas com o addEventListener. Em todas as função temos a letra a seguida de um ponto. O a é relativo a variável a. O innerText é usado para trocar o texto da variável a. O style.background muda o background que está determinado iniciamente no style CSS.
+    </script>
+</body>
+</html>
