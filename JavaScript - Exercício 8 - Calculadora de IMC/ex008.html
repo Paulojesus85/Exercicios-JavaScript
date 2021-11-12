@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculadora de IMC</title>
+    <style> /*Aqui é a área para alterar o CSS do nosso arquivo.*/
+        input{
+            font: 20pt Arial;
+            background-color: rgb(135, 135, 204);
+        }
+        input#botao{
+            background-color: coral;
+            border-radius: 10px;
+        }
+        div#res{
+            font: 30pt arial;
+            margin-top: 30px;
+        }
+        p {
+            font-size: 15pt;
+        }
+    </style>
+</head>
+<body> <!--Aqui é a área do nosso HTML em que vamos criar os inputs para o usuário digitar as informações que serão enviadas para o código JavaScript. O primeiro input é para receber o valor do peso. O segundo input é para receber o valor da altura. O terceiro input é o botão que vai ativar a função calcular no JavaScript. Por último temos a div com o conteudo Resultado-->
+    <h1>Calculadora de IMC</h1>
+    <p>Digite seu peso em kg (exemplo: 67)</p>
+    <input type="number" name="peso" id="peso">
+    <p>Digite sua altura em metros (exemplo: 1,63)</p>
+    <input type="number" name="alt" id="alt">
+    <input type="button" id="botao" value="Calcular" onclick="calcular()">
+    <div id="res">Resultado</div>
+
+    <script src="ex008.js"></script><!--Aqui nós temos o código do script que redireciona para o arquivo javascript. A função calcular vai ser realizada dentro desse arquivo.-->
+        
+</body>
+</html>
