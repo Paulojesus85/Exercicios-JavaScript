@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Eventos DOM</title>
     <style>
         div#res{ /* Nesta área eu usei apenas algumas configurações de CSS para treinar alterações de estilo no conteúdo da tag <div> com id res*/
@@ -19,7 +20,7 @@
                 padding: auto;
                 margin-top: 30px;
                 }
-        input{ /*Nesta área eu usei algumas configurações de CSS para alterar tudo o que for tag <input> independente do id. Por exemplo, eu configurei o background-color, o height e o font-size. Entretanto o bacjground-color e o height eu fiz uma nova configuração na área abaixo para todos os inputs de id botao. Desta forma, apenas o font-size vai valer para todos os inputs.*/
+        input{ /*Nesta área eu usei algumas configurações de CSS para alterar tudo o que for tag <input> independente do id. Por exemplo, eu configurei o background-color, o height e o font-size. Entretanto o background-color e o height eu fiz uma nova configuração na área abaixo para todos os inputs de id botao. Desta forma, apenas o font-size vai valer para todos os inputs.*/
                 background-color: burlywood;
                 height: 25px;
                 font-size: 12pt;
@@ -33,24 +34,12 @@
 
     </style>
 </head>
-<body> <!--A primeira parte do body nós temos três inputs: o primeiro e o segundo são inputs do tipo número. Isso que dizer que serão criadas duas caixas para o usuário digitar números. Os name e id precisam ser diferentes entre cada um desses inputs. O terceiro input é do tipo botão. Ele serve para ser clicado e disparar uma função. Eu inclui um id no terceiro input para poder configurar o CSS dele. O valeu é o texto que vai aparecer dentro do botão. O onclick é o evento que vai disparar a função, que nesse caso é a função somar (). Assim, toda vez que o evento onclick (clicar no botão) acontecer, a função somar vai ser ativada. Ainda dentro dessa primeira área do body, nós temos uma div com o id="res" que tem o texto Resultado. Isso significa tem tenho uma área que receberá o texto Resultado. Veremos mais a frente que esse texto será alterado dentro da função.-->
+<body> <!--A primeira parte do body nós temos três inputs: o primeiro e o segundo são inputs do tipo número. Isso que dizer que serão criadas duas caixas para o usuário digitar números. Os name e id precisam ser diferentes entre cada um desses inputs. O terceiro input é do tipo botão. Ele serve para ser clicado e disparar uma função. Eu inclui um id no terceiro input para poder configurar o CSS dele. O value é o texto que vai aparecer dentro do botão. O onclick é o evento que vai disparar a função, que nesse caso é a função somar (). Assim, toda vez que o evento onclick (clicar no botão) acontecer, a função somar vai ser ativada. Ainda dentro dessa primeira área do body, nós temos uma div com o id="res" que tem o texto Resultado. Isso significa tem tenho uma área que receberá o texto Resultado. Veremos mais a frente que esse texto será alterado dentro da função.-->
     <input type="number" name="txtn1" id="txtn1"> +
     <input type="number" name="txtn2" id="txtn2">
     <input type="button" id="botao" value = "somar" onclick = "somar ()">
     <div id="res">Resultado</div>
+    <script src="script7.js"></script>
     
-    <script> /*Aqui começamos o nosso código JavaScript dentro do body do HTML. Esse código é uma função que sempre será ativada quando o botão somar for clicado. Essa função vai receber e armazenar os valores que vão vir dos input number do html.*/
-        function somar() {
-           var tn1 = document.getElementById('txtn1') /*essa variável vai receber o que for digitado pelo usuário no primeiro input. Para receber o valor utilizamos o comando que pega o valor do documento (document) atraves do valor determinado no id (getElementById)*/
-           var tn2 = document.getElementById('txtn2') /*essa variável vai receber o que for digitado no segundo input usando o mesmo processo da primeira variável. Por isso temos que dar ids diferentes no input*/
-           var res = document.getElementById('res') /*Essa variável vai receber o conteúdo do id 'res'. O conteúdo desse id é a palavra Resultado. Assim, essa palavra vai ficar armazenada nesta variável*/
-           var n1 = Number(tn1.value) /*essa variável é necessária para transformar o conteúdo do input em um número. Mesmo o usuário digitando um número, o sistema vai interpretar como uma string (conjunto de caracteres). Para fazer essa conversão temos que pegar o conteúdo da variável que queremos converter e jogar dentro da função Number. Assim, pegaremos o valor da variável (tn1.value) e transformaremos em um número.*/
-           var n2 = Number(tn2.value) /*Aqui faremos o mesmo processo descrito acima, mas com a outra variável que recebeu o conteúdo do segundo input.*/
-           var s = n1 + n2 /*Aqui que a soma será realizada. Criamos uma variável para armazenar o conteúdo da soma dos números que estão nas variáveis n1 e n2*/
-           res.innerHTML = `A soma de ${n1} com ${n2} será ${s}` /*Está última linha do código tem a função de mudar o valor do texto presente na variável res. Inicialmente a variável res recebeu o conteúdo do id 'res' do HTML. Esse conteúdo era a palavra Resultado. Ao utilizar o comando innerHTML, nós vamos trocar a palavra Resultado por outro conteúdo. No caso deste exercícios, o novo texto será: A soma de ${n1} com ${n2} será ${s}. O valor de cada variável vai assumir o espaço do código. Para que isso aconteça precisamos concatenar os conteúdo. Uma forma fácil de fazer isso é usando ${variável}. Paa funcionar, tudo deve estar dentro de crases.*/
-
-        }
-
-    </script>
 </body>
 </html>
