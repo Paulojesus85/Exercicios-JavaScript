@@ -1,0 +1,23 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    
+}
+input{
+    font: 20pt Arial;
+    background-color: rgb(135, 135, 204);
+}
+input#botao{
+    background-color: coral;
+    border-radius: 10px;
+    margin-top: 25px;
+}
+div#res{
+    font: 30pt arial;
+    margin-top: 30px;
+}
+p {
+    font-size: 15pt;
+}
